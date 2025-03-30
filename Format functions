@@ -1,0 +1,15 @@
+create database jayasri;
+create table jayasri.kavi( 
+time TIME,
+date DATE,
+month varchar(345),
+phonenumber bigint
+);
+insert into jayasri.kavi(date, time, month, phonenumber) values ("2004-3-23", "09:00:00", "march", 1234567890);
+insert into jayasri.kavi(date, time, month, phonenumber) values ("2007-3-3", "05:00:00", "april", 0987654321);
+insert into jayasri.kavi(date, time, month, phonenumber) values ("2008-5-4", "12:00:00", "may", 1234567098);
+select *from jayasri.kavi;                                             
+SELECT month AS formatted_month FROM jayasri.kavi;
+SELECT FORMAT(phonenumber, 0) AS formatted_phonenumber FROM jayasri.kavi;
+SELECT DATE_format(time, '%r') AS formatted_time FROM jayasri.kavi;
+SELECT DATE_FORMAT(date, '%d') AS formatted_date FROM jayasri.kavi;

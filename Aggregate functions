@@ -1,0 +1,31 @@
+I’ve been diving deeper into SQL Aggregate Functions to analyze and summarize data effectively.
+
+select count(*) as no_of_records from jayasri.kavi
+select sum(age) as sum_age from jayasri.kavi
+select avg(age) as average_age from jayasri.kavi
+select min(age) as min_age from jayasri.kavi
+select max(age) as max_age from jayasri.kavi
+
+1. COUNT()
+Counts the total number of records in the table.
+Useful for determining the size of datasets.
+
+2. SUM()
+Calculates the sum of values in a numeric column.
+Helpful in adding up numerical data like age or salary.
+
+3. AVG()
+Returns the average value of a numeric column.
+Ideal for finding the mean value in a dataset.
+
+4. MIN()
+Retrieves the minimum value from a column.
+Useful for identifying the smallest value in a dataset.
+
+5. MAX()
+Retrieves the maximum value from a column.
+Helps in identifying the highest value in a dataset.
+
+Successfully practiced these aggregate functions on the jayasri.kavi table to strengthen my understanding of SQL queries.
+Excited to apply these functions in real-world projects for better data insights!
+#SQL #AggregateFunctions #Database #Learning #GitHub 💻📊

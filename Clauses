@@ -1,0 +1,21 @@
+create database jayasri;
+create table jayasri.girl ( 
+name varchar(345),
+age int,
+phonenumber bigint,
+day varchar(255)
+);
+insert into jayasri.girl(name, age, phonenumber, day) values("jaya", 18, 1234567890, "mon");
+insert into jayasri.girl(name, age, phonenumber, day) values("reshu", 19, 1234567890, "tue");														
+insert into jayasri.girl(name, age, phonenumber, day) values("madhu", 20, 1234567890, "wed");                                                         
+insert into jayasri.girl(name, age, phonenumber, day) values("buvi", 21, 1234567890, "thu");                                                          																																						
+
+select name as petname from jayasri.girl
+select name,avg(age) as average from jayasri.girl group by name;
+select count(age), name from jayasri.girl group by name having count(age);
+select *from jayasri.girl order by age;
+select *from jayasri.girl order by age desc;
+select *from jayasri.girl where name="jaya";
+select *from jayasri.girl;
+select age from jayasri.girl where age < any (select age from jayasri.girl);
+select age from jayasri.girl where age = 18;

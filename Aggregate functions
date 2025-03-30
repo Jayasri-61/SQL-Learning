@@ -1,10 +1,17 @@
-
+create database jayasri;
+create table jayasri.girl ( 
+name varchar(345),
+age int,
+phonenumber bigint,
+day varchar(255)
+);
+insert into jayasri.girl(name, age, phonenumber, day) values("jaya", 18, 1234567890, "mon");
+insert into jayasri.girl(name, age, phonenumber, day) values("reshu", 19, 1234567890, "tue");														
+insert into jayasri.girl(name, age, phonenumber, day) values("madhu", 20, 1234567890, "wed");                                                         
+insert into jayasri.girl(name, age, phonenumber, day) values("buvi", 21, 1234567890, "thu");                                                          																																						
+select *from jayasri.girl;
 select count(*) as no_of_records from jayasri.kavi
 select sum(age) as sum_age from jayasri.kavi
 select avg(age) as average_age from jayasri.kavi
 select min(age) as min_age from jayasri.kavi
 select max(age) as max_age from jayasri.kavi
-
-//Successfully practiced these aggregate functions on the jayasri.kavi table to strengthen my understanding of SQL queries.
-//Excited to apply these functions in real-world projects for better data insights!
-

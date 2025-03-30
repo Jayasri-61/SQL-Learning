@@ -1,6 +1,3 @@
-I’ve been actively exploring SQL to enhance my database management skills. Here’s a glimpse of what I’ve learned so far and how I’m progressing.
-I’m making consistent progress by practicing various SQL operations and understanding core concepts.
-I plan to dive deeper into advanced SQL features like joins, stored procedures, and indexing soon!
 
 create database jayasri;
 create table jayasri.girl ( 
@@ -27,41 +24,8 @@ delete from jayasri.kavi;
 drop table jayasri.kavi;
 
 
-1. Database and Table Creation
-Created a database named jayasri.
 
-Created a table girl with columns: name, age, phonenumber, and day.
 
-2. Data Insertion
-Inserted sample records into the girl table with names, ages, phone numbers, and days.
-
-3. Data Retrieval
-Retrieved all records from the girl table.
-
-Displayed specific columns (name and age).
-
-Filtered records where day equals "thu".
-
-4. Table Modifications
-Added a new column mark.
-
-Modified the age column to NOT NULL.
-
-Renamed the column day to month.
-
-Renamed the table girl to kavi.
-
-5. Data Update and Deletion
-Updated the name buvi to buva.
-
-Deleted a record where age was 18.
-
-Deleted all records from the kavi table.
-
-6. Table Deletion
-Dropped the kavi table.
-Excited to explore more advanced SQL techniques.
-#SQL #Database #Learning #GitHub 💻🚀
 
 
 

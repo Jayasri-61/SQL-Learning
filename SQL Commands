@@ -1,4 +1,3 @@
-
 create database jayasri;
 create table jayasri.girl ( 
 name varchar(345),
@@ -18,7 +17,7 @@ alter table jayasri.girl modify column age int not null;
 alter table jayasri.girl rename column day to month;
 alter table jayasri.girl rename to jayasri.kavi;
 select *from jayasri.kavi;
-update jayasri.kavi set name = "buva" where name = "buvi";
+update jayasri.kavi set name = "buvana" where name = "buvi";
 delete from jayasri.kavi  where age = 18;
 delete from jayasri.kavi;
 drop table jayasri.kavi;

@@ -1,0 +1,16 @@
+create database jayasri;
+create table jayasri.kavi( 
+time TIME,
+date DATE,
+month varchar(345),
+phonenumber bigint
+);
+insert into jayasri.kavi(date, time, month, phonenumber) values ("2004-3-23", "09:00:00", "march", 1234567890);
+insert into jayasri.kavi(date, time, month, phonenumber) values ("2007-3-3", "05:00:00", "april", 0987654321);
+insert into jayasri.kavi(date, time, month, phonenumber) values ("2008-5-4", "12:00:00", "may", 1234567098);
+select *from jayasri.kavi;  
+SELECT CAST(date AS CHAR(10)) AS numbers from jayasri.kavi;
+select cast(date as unsigned) as string from jayasri.kavi;
+select cast(time as char) as numbers from jayasri.kavi;
+SELECT CAST(time AS signed) AS string from jayasri.kavi;
+select cast(time AS float) as decimal_value from jayasri.kavi;

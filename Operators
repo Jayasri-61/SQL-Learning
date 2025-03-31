@@ -1,0 +1,46 @@
+create database kavi;
+create table kavi.jaya(
+customer_id int not null unique primary key,
+name varchar(255) not null,
+products varchar(255) not null,
+age int check(age>=18)
+);
+insert into kavi.jaya(customer_id, name, products, age) values  (564, "Jaii", "oil", 34),
+																(865, "buvi", "pot", 16),
+																(713, "thiru","mat", 28),
+																(177, "sugan", "stick", 29),
+																(737, "priya", "pen", 30),
+																(689, "reshu", "pencil", 27);
+select *from kavi.jaya
+create table kavi.account(
+account_id int not null primary key,
+bank varchar(255) not null,
+customer_id int,
+foreign key(customer_id) references kavi.jaya(customer_id)
+);
+insert into kavi.account(account_id, bank, customer_id) values(24, "sbi", 564),
+													  (625, "boi", 865),
+													  (732, "hdfc", 713),
+													  (172, "iob", 177),
+													  (372, "kvb", 737),
+													  (696, "icic", 689);
+select *from kavi.account
+
+#operators & clauses
+SELECT customer_id FROM kavi.jaya WHERE customer_id = ALL (
+    SELECT customer_id FROM kavi.account WHERE account_id > 1000
+);
+SELECT customer_id FROM kavi.jaya WHERE customer_id = ANY (
+    SELECT customer_id FROM kavi.account WHERE account_id > 1000
+);
+SELECT customer_id FROM kavi.jaya WHERE age >= 10;
+SELECT customer_id FROM kavi.jaya WHERE customer_id > 3000 OR age > 300;
+SELECT name FROM kavi.jaya WHERE customer_id > 30 and age > 30;
+SELECT age FROM kavi.jaya WHERE NOT (age > 30);
+SELECT age FROM kavi.jaya WHERE NOT (age <= 30);
+SELECT age FROM kavi.jaya WHERE age BETWEEN 25 AND 35;
+select name from kavi.jaya where age in(30,16);
+select name from kavi.jaya where name like 'p%';
+select name from kavi.jaya where name like 'r_s_u';
+SELECT name, products FROM kavi.jaya WHERE EXISTS (SELECT customer_id FROM kavi.account WHERE account_id > 30
+);     
